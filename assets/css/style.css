@@ -1,3 +1,8 @@
+@import url('font.styles.css');
+body {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
 .nav-link {
     color: #FF5A59 !important;
 }
@@ -71,4 +76,19 @@
 .bg-gradient-1 {
     background-image: linear-gradient(to right, #FF5A59 , #FF9E62) !important;
 }
+
+.text-box-custom-1 {
+    border-color: #FF5A59 !important;
+    border-radius: 25px !important;
+    outline: 0px;
+}
+
+.table {
+    border-radius: 10px !important;
+}
+
+.thead {
+    color: #FF5A59;
+}
+
 

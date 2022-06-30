@@ -5,22 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark - Home Page</title>
+    <link rel="icon" href="assets/media/image/spark_icon.png" type="image/png">
 
+    <!-- stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet/scss" type="text/css" href="assets/css/loader.scss" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/datatable.min.css">
+
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/font.awesome.icons.js"></script>
-    <link rel="icon" href="assets/media/image/spark_icon.png" type="image/png">
+    <script src="assets/js/datatable.min.js"></script>
 
+    <script>
+      $(document).ready(function(){
+        $(document).on('click', 'a[href^="#"]', function (event) {
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+          }, 500);
+        });
+
+        $('#dataTableId').DataTable();
+      });
+    </script>
 </head>
 <body>
   
 
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="http://myhost.ezyro.com/">
             <img src="assets/media/image/spark_logo_4.png" height="30px" width="auto" alt="LOGO">
           </a>
           <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -35,7 +51,7 @@
                 <a class="nav-link" href="#gamesDivId">Games</a>
               </li>  
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Website Templates (Bootstrap)</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Website Templates</a>
                 <ul class="dropdown-menu shadow">
                   <li><a class="dropdown-item" href="#dashboardsDivId">Dashboards</a></li>
                   <li><a class="dropdown-item dropdown" href="#backgroundsDivId">Gradient Backgrounds</a></li>
@@ -52,9 +68,32 @@
       </nav>
       
       <div class="container mt-4">
-        
-        <div class="d-flex justify-content-evenly">
-          <div class="px-3 pt-2 pb-1 shadow bg-gradient-1"></div>
+
+        <div class="row mb-3 justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="my-2 px-5 pt-4 pb-3 shadow bg-gradient-1 text-center" style="border: none;border-radius: 10px;">
+              <a href="#softwaresDivId" class="text-decoration-none">
+                <span class="fab fa-uncharted fa-4x text-light"></span>
+                <h3 class="text-light">Softwares</h3>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="my-2 px-5 pt-4 pb-3 shadow bg-gradient-1 text-center" style="border: none;border-radius: 10px;">
+              <a href="#dashboardsDivId" class="text-decoration-none">
+                <span class="fas fa-code fa-4x text-light"></span>
+                <h3 class="text-light">Website Templates</h3>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="my-2 px-5 pt-4 pb-3 shadow bg-gradient-1 text-center" style="border: none;border-radius: 10px;">
+              <a href="#gamesDivId" class="text-decoration-none">
+                <span class="fas fa-gamepad fa-4x text-light"></span>
+                <h3 class="text-light">Games</h3>
+              </a>
+            </div>
+          </div>
         </div>
 
         <div id="dashboardsDivId">
@@ -71,10 +110,167 @@
 
         <div id="navbarsDivId">
           <div class="col-12 px-3 pt-2 pb-1 shadow bg-gradient-1 mt-4" style="border: none;border-radius: 10px;">
-            <h5 class="text-light"><i class="fab fa-uncharted"></i><span class="fas fa-compass"></span> Attractive Navbars</h5>
+            <h5 class="text-light"><span class="fas fa-compass"></span> Attractive Navbars</h5>
           </div>
         </div>
+
+        <div id="softwaresDivId">
+          <div class="col-12 px-3 pt-2 pb-1 shadow bg-gradient-1 mt-4" style="border: none;border-radius: 10px;">
+            <h5 class="text-light"><span class="fab fa-uncharted"></span> Softwares</h5>
+          </div>
+
+          <div class="table-responsive mt-4">
+            <table class="table border shadow" id="dataTableId">
+              <thead class="thead">
+                <tr>
+                  <th>Sl No.</th>
+                  <th>Website Name</th>
+                  <th>Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Get Into PC</td>
+                  <td><a href="https://getintopc.com/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Cracked Software</a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>File Horse</td>
+                  <td><a href="https://www.filehorse.com/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Original Software</a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>File Hippo</td>
+                  <td><a href="https://filehippo.com/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Original Software</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Ninite</td>
+                  <td><a href="https://ninite.com/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Original Software</a></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>SoftPedia</td>
+                  <td><a href="https://www.softpedia.com/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Original Software</a></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Snap Files</td>
+                  <td><a href="https://www.snapfiles.com/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Original Software</a></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>File Puma</td>
+                  <td><a href="https://www.filepuma.com/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Original Software</a></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Download Crew</td>
+                  <td><a href="https://www.downloadcrew.com/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Original Software</a></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Major Geeks</td>
+                  <td><a href="https://www.majorgeeks.com/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Original Software</a></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Pirate PC</td>
+                  <td><a href="https://piratepc.me/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Cracked Software</a></td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>Kiss Ass Cracks</td>
+                  <td><a href="https://kickasscracks.com/" class="text-unique-1 text-decoration-none" target="_blank"><span class="fas fa-link"></span> Cracked Software</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="gamesDivId">
+          <div class="col-12 px-3 pt-2 pb-1 shadow bg-gradient-1 mt-4" style="border: none;border-radius: 10px;">
+            <h5 class="text-light"><span class="fas fa-gamepad"></span> Games</h5>
+          </div>
+        </div>
+        
       </div>
+
+      <footer class="text-center text-white mt-4" style="background-color: #f1f1f1;">
+        <!-- Grid container -->
+        <div class="container pt-4 d-flex justify-content-between">
+          <section class="mb-4">
+            <a href="http://myhost.ezyro.com/">
+              <img src="assets/media/image/spark_logo_4.png" height="50px" width="auto" alt="LOGO">
+            </a>
+          </section>
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-unique-1 m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-unique-1 m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-unique-1 m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-unique-1 m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-unique-1 m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-unique-1 m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center text-unique-1 p-3 bg-light">
+          © 2022 Copyright:
+          <a class="text-unique-1" href="http://myhost.ezyro.com/">SPARKTech.co.in</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
 
 </body>
 </html>
