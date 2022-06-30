@@ -77,11 +77,11 @@ body {
     background-image: linear-gradient(to right, #FF5A59 , #FF9E62) !important;
 }
 
-.text-box-custom-1 {
+/* .text-box-custom-1 {
     border-color: #FF5A59 !important;
     border-radius: 25px !important;
     outline: 0px !important;
-}
+} */
 
 .table {
     border-radius: 10px !important;
