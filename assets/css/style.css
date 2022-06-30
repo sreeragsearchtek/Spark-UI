@@ -68,9 +68,9 @@ body {
 }
 
 .dropdown-submenu .dropdown-menu {
-    top: 0;
-    right: 100%;
-    margin-top: -1px;
+    top: 0 !important;
+    right: 100% !important;
+    margin-top: -1px !important;
 }
 
 .bg-gradient-1 {
@@ -80,7 +80,7 @@ body {
 .text-box-custom-1 {
     border-color: #FF5A59 !important;
     border-radius: 25px !important;
-    outline: 0px;
+    outline: 0px !important;
 }
 
 .table {
@@ -88,7 +88,7 @@ body {
 }
 
 .thead {
-    color: #FF5A59;
+    color: #FF5A59 !important;
 }
 
 
