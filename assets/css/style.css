@@ -91,4 +91,39 @@ body {
     color: #FF5A59 !important;
 }
 
+.nav {
+    border-bottom-color: #FF5A59 !important;
+}
+
+.nav-tabs .nav-item .nav-link {
+    color: FF5A59 !important;
+    margin-bottom: 0px !important
+  }
+  
+  .nav-tabs .nav-item .nav-link.active {
+    background-image: linear-gradient(to right, #FF5A59 , #FF9E62) !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 25px !important;
+  }
+
+  .nav-tabs .nav-item .nav-link.active:hover {
+    background-image: linear-gradient(to right, #FF5A59 , #FF9E62) !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 25px !important;
+  }
+  
+  .tab-content {
+    border-top: transparent !important;
+    padding: 15px !important;
+  }
+  
+  .tab-content .tab-pane {
+    background-color: #FFF !important;
+    color: #0080FF !important;
+    min-height: 200px !important;
+    height: auto !important;
+  }
+
 
